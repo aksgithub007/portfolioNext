@@ -7,6 +7,8 @@ import styles from "@/app/Components/styles/detailsForm.module.css";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import bcrypt from "bcryptjs/dist/bcrypt";
+import { useRouter } from "next/navigation";
 
 const schema = yup
   .object({
@@ -44,14 +46,24 @@ function AddDetailsForm({ submit }) {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  const router = useRouter();
   const onSubmit = async (data) => {
-    console.log(data);
+    const hasPassword = await bcrypt.hash(data.password, 10);
+    data.password = hasPassword;
     if (data) {
-      await fetch("http://localhost:3000/api/adduser", {
+      // console.log(data);
+      const response = await fetch("http://localhost:3000/api/adduser", {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
+      if (response.ok) {
+        router.push("/");
+      }
+      // console.log(response);
     }
     reset();
   };
