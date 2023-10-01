@@ -1,0 +1,18 @@
+.navbarBg {
+  background-color: #140241;
+}
+.linkContent {
+  font-size: 15px;
+  line-height: 28px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 0px 7px;
+}
+.linkContent:hover {
+  font-size: 15px;
+  line-height: 28px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}

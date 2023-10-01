@@ -1,0 +1,42 @@
+.outer {
+  display: block;
+  width: 100%;
+  padding: 30px 10px;
+  background-color: rgba(147, 107, 232, 0.05);
+  margin-top: -20px;
+}
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #140241;
+  line-height: 35px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.breadcrumbLink {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  line-height: 35px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.active {
+  font-size: 15px;
+  font-weight: 600;
+  color: #140241;
+  line-height: 35px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.outerBreadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active::after {
+  content: "\2192";
+  font-size: 15px;
+  color: #140241;
+  padding: 0px 15px;
+}

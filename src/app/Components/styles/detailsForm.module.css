@@ -1,0 +1,31 @@
+.formWrapper {
+  display: block;
+  padding: 60px 0px;
+  width: 100%;
+  height: auto;
+}
+.mainTitle {
+  font-size: 55px;
+  font-weight: 700;
+  color: #140241;
+  line-height: 50px;
+  text-align: center;
+}
+.form input,
+.form label {
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #140241;
+}
+.form input:focus {
+  outline: 0px;
+  box-shadow: none;
+  border: 1px solid #140241;
+}
+.aboutSubmitButtonWrapper {
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #140241;
+}

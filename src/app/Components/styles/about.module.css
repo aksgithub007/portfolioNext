@@ -1,0 +1,44 @@
+.aboutOuter {
+  display: block;
+  padding: 60px 0px;
+}
+.imageWrapper {
+  width: 100%;
+  height: 400px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top center;
+}
+.socialWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 25px;
+}
+.socialIcon {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  font-size: 18px;
+  color: #140241;
+  line-height: 1;
+}
+.socialWrap {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #140241;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonWrapper {
+  margin-right: 15px;
+}
